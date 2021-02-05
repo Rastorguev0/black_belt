@@ -15,8 +15,58 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="part_e_san_fail\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="part_e_san_fail\descriptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="part_e_san_fail\json.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="part_e_san_fail\requests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="part_e_san_fail\sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="part_e_san_fail\transport_catalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="part_e_san_fail\transport_router.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="part_e_san_fail\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="part_e_san_fail\descriptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\requests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\router.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\sphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\transport_catalog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\transport_router.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part_e_san_fail\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

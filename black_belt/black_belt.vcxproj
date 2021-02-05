@@ -18,6 +18,27 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="part_e_san_fail\descriptions.cpp" />
+    <ClCompile Include="part_e_san_fail\json.cpp" />
+    <ClCompile Include="part_e_san_fail\main.cpp" />
+    <ClCompile Include="part_e_san_fail\requests.cpp" />
+    <ClCompile Include="part_e_san_fail\sphere.cpp" />
+    <ClCompile Include="part_e_san_fail\transport_catalog.cpp" />
+    <ClCompile Include="part_e_san_fail\transport_router.cpp" />
+    <ClCompile Include="part_e_san_fail\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="part_e_san_fail\descriptions.h" />
+    <ClInclude Include="part_e_san_fail\graph.h" />
+    <ClInclude Include="part_e_san_fail\json.h" />
+    <ClInclude Include="part_e_san_fail\requests.h" />
+    <ClInclude Include="part_e_san_fail\router.h" />
+    <ClInclude Include="part_e_san_fail\sphere.h" />
+    <ClInclude Include="part_e_san_fail\transport_catalog.h" />
+    <ClInclude Include="part_e_san_fail\transport_router.h" />
+    <ClInclude Include="part_e_san_fail\utils.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -91,6 +112,7 @@
       <ConformanceMode>true</ConformanceMode>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,11 +163,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_GLIBCXX_DEBUG;_GLIBCXX_DEBUG_PEDANTIC;</PreprocessorDefinitions>
-    </ClCompile>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -14,7 +14,7 @@
 using namespace std;
 
 int main() {
-	int* n = DBG_NEW int[5];
+	int* n = DBG_NEW int[10];
 	_CrtDumpMemoryLeaks();
 	return 0;
 }

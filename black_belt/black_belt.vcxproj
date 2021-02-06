@@ -19,25 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="part_e_san_fail\descriptions.cpp" />
-    <ClCompile Include="part_e_san_fail\json.cpp" />
-    <ClCompile Include="part_e_san_fail\main.cpp" />
-    <ClCompile Include="part_e_san_fail\requests.cpp" />
-    <ClCompile Include="part_e_san_fail\sphere.cpp" />
-    <ClCompile Include="part_e_san_fail\transport_catalog.cpp" />
-    <ClCompile Include="part_e_san_fail\transport_router.cpp" />
-    <ClCompile Include="part_e_san_fail\utils.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="part_e_san_fail\descriptions.h" />
-    <ClInclude Include="part_e_san_fail\graph.h" />
-    <ClInclude Include="part_e_san_fail\json.h" />
-    <ClInclude Include="part_e_san_fail\requests.h" />
-    <ClInclude Include="part_e_san_fail\router.h" />
-    <ClInclude Include="part_e_san_fail\sphere.h" />
-    <ClInclude Include="part_e_san_fail\transport_catalog.h" />
-    <ClInclude Include="part_e_san_fail\transport_router.h" />
-    <ClInclude Include="part_e_san_fail\utils.h" />
+    <ClCompile Include="sum.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

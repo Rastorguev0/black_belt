@@ -75,32 +75,33 @@ namespace Svg {
 	template <typename ObjT>
 	class Shape {
 	public:
-		Shape() {
-			shape = static_cast<ObjT*>(this);
-		}
+		Shape() {}
 
 		ObjT& SetFillColor(const Color& color) {
 			fill = color;
-			return *shape;
+			return GetSelfRef();
 		}
 		ObjT& SetStrokeColor(const Color& color) {
 			stroke_color = color;
-			return *shape;
+			return GetSelfRef();
 		}
 		ObjT& SetStrokeWidth(double width) {
 			stroke_width = width;
-			return *shape;
+			return GetSelfRef();
 		}
 		ObjT& SetStrokeLineCap(const std::string& type) {
 			stroke_line_cap = type;
-			return *shape;
+			return GetSelfRef();
 		}
 		ObjT& SetStrokeLineJoin(const std::string& type) {
 			stroke_line_join = type;
-			return *shape;
+			return GetSelfRef();
+		}
+		ObjT& GetSelfRef() {
+			return static_cast<ObjT&>(*this);
 		}
 		const ObjT* GetShape() const {
-			return shape;
+			return static_cast<const ObjT*>(this);
 		}
 
 		virtual void Render(std::ostream& out) const = 0;
@@ -114,7 +115,6 @@ namespace Svg {
 
 		virtual ~Shape() = default;
 	protected:
-		ObjT* shape;
 		Color fill;
 		Color stroke_color;
 		double stroke_width = 1.0;
@@ -135,7 +135,7 @@ namespace Svg {
 			r = radius;
 			return *this;
 		}
-		void Render(std::ostream& out) const {
+		void Render(std::ostream& out) const override {
 			out << "<circle ";
 			RenderBasics(out);
 			out << Property("cx", cx) << Property("cy", cy) << Property("r", r);
@@ -155,7 +155,7 @@ namespace Svg {
 			points.points.push_back(p);
 			return *this;
 		}
-		void Render(std::ostream& out) const {
+		void Render(std::ostream& out) const override {
 			out << "<polyline ";
 			RenderBasics(out);
 			out << Property("points", points);
@@ -191,7 +191,7 @@ namespace Svg {
 			text = data;
 			return *this;
 		}
-		void Render(std::ostream& out) const {
+		void Render(std::ostream& out) const override{
 			out << "<text ";
 			RenderBasics(out);
 			out << Property("x", x) << Property("y", y)

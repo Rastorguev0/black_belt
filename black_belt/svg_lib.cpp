@@ -1,9 +1,11 @@
+#define _USE_MATH_DEFINES
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 #include <variant>
 #include <optional>
+#include <cmath>
 
 namespace Svg {
 
@@ -31,8 +33,8 @@ namespace Svg {
 	class Color {
 	public:
 		Color() {};
-		Color(const char color[]) : color(color) {};
-		Color(std::string color) : color(move(color)) {};
+		Color(const char* color) : color(color) {};
+		Color(const std::string& color) : color(color) {};
 		Color(const Rgb& color) : color(color) {};
 		friend std::ostream& operator <<(std::ostream& out, const Color& c) {
 			if (c.color) {
@@ -70,11 +72,12 @@ namespace Svg {
 
 
 
-
 	template <typename ObjT>
 	class Shape {
 	public:
-		Shape() {};
+		Shape() {
+			shape = static_cast<ObjT*>(this);
+		}
 
 		ObjT& SetFillColor(const Color& color) {
 			fill = color;
@@ -84,16 +87,16 @@ namespace Svg {
 			stroke_color = color;
 			return *shape;
 		}
-		ObjT& SetStrokeWidth(int width) {
+		ObjT& SetStrokeWidth(double width) {
 			stroke_width = width;
 			return *shape;
 		}
-		ObjT& SetStrokeLineCap(std::string type) {
-			stroke_line_cap = move(type);
+		ObjT& SetStrokeLineCap(const std::string& type) {
+			stroke_line_cap = type;
 			return *shape;
 		}
-		ObjT& SetStrokeLineJoin(std::string type) {
-			stroke_line_join = move(type);
+		ObjT& SetStrokeLineJoin(const std::string& type) {
+			stroke_line_join = type;
 			return *shape;
 		}
 		const ObjT* GetShape() const {
@@ -106,10 +109,12 @@ namespace Svg {
 			out << Property("fill", fill) << Property("stroke", stroke_color)
 				<< Property("stroke-width", stroke_width);
 			if (stroke_line_cap) out << Property("stroke-linecap", stroke_line_cap.value());
-			if (stroke_line_join) out << ("stroke-linejoin", stroke_line_join.value());
+			if (stroke_line_join) out << Property("stroke-linejoin", stroke_line_join.value());
 		}
+
+		virtual ~Shape() = default;
 	protected:
-		ObjT* shape = nullptr;
+		ObjT* shape;
 		Color fill;
 		Color stroke_color;
 		double stroke_width = 1.0;
@@ -120,9 +125,7 @@ namespace Svg {
 
 	class Circle : public Shape<Circle> {
 	public:
-		Circle() {
-			shape = this;
-		}
+		Circle() {}
 		Circle& SetCenter(Point p) {
 			cx = p.x;
 			cy = p.y;
@@ -147,9 +150,7 @@ namespace Svg {
 
 	class Polyline : public Shape<Polyline> {
 	public:
-		Polyline() {
-			shape = this;
-		}
+		Polyline() {}
 		Polyline& AddPoint(Point p) {
 			points.points.push_back(p);
 			return *this;
@@ -167,9 +168,7 @@ namespace Svg {
 
 	class Text : public Shape<Text> {
 	public:
-		Text() {
-			shape = this;
-		}
+		Text() {}
 		Text& SetPoint(Point p) {
 			x = p.x;
 			y = p.y;
@@ -184,12 +183,12 @@ namespace Svg {
 			font_size = size;
 			return *this;
 		}
-		Text& SetFontFamily(std::string family) {
-			font_family = move(family);
+		Text& SetFontFamily(const std::string& family) {
+			font_family = family;
 			return *this;
 		}
-		Text& SetData(std::string data) {
-			text = move(data);
+		Text& SetData(const std::string& data) {
+			text = data;
 			return *this;
 		}
 		void Render(std::ostream& out) const {
@@ -197,7 +196,7 @@ namespace Svg {
 			RenderBasics(out);
 			out << Property("x", x) << Property("y", y)
 				<< Property("dx", dx) << Property("dy", dy) << Property("font-size", font_size);
-			if (font_family) out << Property("font-family",font_family.value());
+			if (font_family) out << Property("font-family", font_family.value());
 			out << ">" << text << "</text> ";
 		}
 	private:
@@ -229,9 +228,9 @@ namespace Svg {
 			out << svg_close_tag;
 		}
 	private:
-		const std::string header_tag = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
-		const std::string svg_open_tag = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n";
-		const std::string svg_close_tag = "\n</svg>";
+		const std::string header_tag = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
+		const std::string svg_open_tag = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">";
+		const std::string svg_close_tag = "</svg>";
 	private:
 		std::vector<AnyShape> shapes;
 
@@ -239,15 +238,15 @@ namespace Svg {
 			for (auto object : shapes) {
 				std::visit(
 					[&out](const auto& obj) {obj.Render(out); },
-					object
-				);
+					object);
 			}
 		}
 	};
 }
 
+
 int main() {
-	std::ofstream svg_file("svg.svg");
+	std::ofstream out("svg.svg");
 	Svg::Document svg;
 
 	svg.Add(
@@ -287,6 +286,5 @@ int main() {
 		.SetData("C++")
 	);
 
-	svg.Render(svg_file);
-
+	svg.Render(out);
 }

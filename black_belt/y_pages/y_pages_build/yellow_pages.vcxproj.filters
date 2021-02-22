@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_src\test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_src\merge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\y_pages_src\test_runner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\y_pages_src\yellow_pages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\address.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\company.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\name.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\phone.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\provider.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\signal.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\url.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\working_time.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{257664CF-2B57-330B-9E35-7780AEF226E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{F0EFBB2D-2E30-3E67-AFAC-8D037313A4BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FE8C9EBD-C700-3CB9-A912-A5590985A772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

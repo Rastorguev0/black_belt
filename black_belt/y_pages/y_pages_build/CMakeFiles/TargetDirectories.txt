@@ -1,0 +1,3 @@
+C:/Users/Redaciple/source/repos/y_pages/y_pages_build/CMakeFiles/yellow_pages.dir
+C:/Users/Redaciple/source/repos/y_pages/y_pages_build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Redaciple/source/repos/y_pages/y_pages_build/CMakeFiles/ZERO_CHECK.dir

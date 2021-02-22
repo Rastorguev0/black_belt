@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8CC619C3-A9BF-3492-8627-D43E39406542}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>yellow_pages</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yellow_pages.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yellow_pages</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">yellow_pages.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">yellow_pages</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">yellow_pages.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">yellow_pages</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">yellow_pages.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">yellow_pages</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\repos\y_pages\y_pages_src;C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level2</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\Redaciple\source\protobuf\lib\libprotobufd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4099</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/Debug/yellow_pages.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/Debug/yellow_pages.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\Redaciple\source\protobuf\lib\libprotobufd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/Release/yellow_pages.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/Release/yellow_pages.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\Redaciple\source\protobuf\lib\libprotobufd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/MinSizeRel/yellow_pages.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/MinSizeRel/yellow_pages.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Redaciple\source\protobuf\include;C:\Users\Redaciple\source\repos\y_pages\y_pages_build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\Redaciple\source\protobuf\lib\libprotobufd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/RelWithDebInfo/yellow_pages.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Redaciple/source/repos/y_pages/y_pages_build/RelWithDebInfo/yellow_pages.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\address.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/address.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/address.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\address.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/address.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/address.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\address.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/address.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/address.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\address.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/address.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/address.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\address.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\company.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/company.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/company.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\company.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/company.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/company.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\company.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/company.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/company.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\company.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/company.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/company.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\company.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\name.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/name.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/name.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\name.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/name.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/name.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\name.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/name.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/name.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\name.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/name.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/name.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\name.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\phone.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/phone.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/phone.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\phone.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/phone.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/phone.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\phone.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/phone.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/phone.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\phone.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/phone.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/phone.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\phone.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\provider.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/provider.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/provider.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\provider.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/provider.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/provider.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\provider.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/provider.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/provider.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\provider.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/provider.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/provider.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\provider.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\signal.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/signal.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/signal.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\signal.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/signal.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/signal.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\signal.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/signal.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/signal.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\signal.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/signal.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/signal.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\signal.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\url.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/url.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/url.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\url.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/url.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/url.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\url.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/url.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/url.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\url.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/url.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/url.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\url.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\8a696e621c374dd5411fe6cd678f5a99\working_time.pb.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running cpp protocol buffer compiler on protos/working_time.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/working_time.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\working_time.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running cpp protocol buffer compiler on protos/working_time.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/working_time.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\working_time.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Running cpp protocol buffer compiler on protos/working_time.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/working_time.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\working_time.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Running cpp protocol buffer compiler on protos/working_time.proto</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\protobuf\bin\protoc.exe --cpp_out C:/Users/Redaciple/source/repos/y_pages/y_pages_build -I C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos C:/Users/Redaciple/source/repos/y_pages/y_pages_src/protos/working_time.proto
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_src\protos\working_time.proto;C:\Users\Redaciple\source\protobuf\bin\protoc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.h;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.cc</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_src\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Redaciple/source/repos/y_pages/y_pages_src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Redaciple\source\cmake\bin\cmake.exe -SC:/Users/Redaciple/source/repos/y_pages/y_pages_src -BC:/Users/Redaciple/source/repos/y_pages/y_pages_build --check-stamp-file C:/Users/Redaciple/source/repos/y_pages/y_pages_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindProtobuf.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Redaciple/source/repos/y_pages/y_pages_src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Redaciple\source\cmake\bin\cmake.exe -SC:/Users/Redaciple/source/repos/y_pages/y_pages_src -BC:/Users/Redaciple/source/repos/y_pages/y_pages_build --check-stamp-file C:/Users/Redaciple/source/repos/y_pages/y_pages_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindProtobuf.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Redaciple/source/repos/y_pages/y_pages_src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Redaciple\source\cmake\bin\cmake.exe -SC:/Users/Redaciple/source/repos/y_pages/y_pages_src -BC:/Users/Redaciple/source/repos/y_pages/y_pages_build --check-stamp-file C:/Users/Redaciple/source/repos/y_pages/y_pages_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindProtobuf.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Redaciple/source/repos/y_pages/y_pages_src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Redaciple\source\cmake\bin\cmake.exe -SC:/Users/Redaciple/source/repos/y_pages/y_pages_src -BC:/Users/Redaciple/source/repos/y_pages/y_pages_build --check-stamp-file C:/Users/Redaciple/source/repos/y_pages/y_pages_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCCompilerABI.c;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXCompilerABI.cpp;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeFindBinUtils.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCCompiler.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCXXCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CMakeTestRCCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\FindProtobuf.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Internal\FeatureTesting.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-Determine-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Users\Redaciple\source\cmake\share\cmake-3.19\Modules\SelectLibraryConfigurations.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeCXXCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeRCCompiler.cmake;C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\3.19.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Redaciple\source\repos\y_pages\y_pages_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.cc" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.cc" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.cc" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.cc" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.cc" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.cc" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.cc" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.cc" />
+    <ClInclude Include="..\y_pages_src\test_runner.h" />
+    <ClInclude Include="..\y_pages_src\yellow_pages.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\address.pb.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\company.pb.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\name.pb.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\phone.pb.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\provider.pb.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\signal.pb.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\url.pb.h" />
+    <ClInclude Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_build\working_time.pb.h" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_src\test.cpp" />
+    <ClCompile Include="C:\Users\Redaciple\source\repos\y_pages\y_pages_src\merge.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

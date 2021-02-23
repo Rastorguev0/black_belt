@@ -19,11 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="nucleotide.cpp" />
-    <ClCompile Include="nucleotide_test.cpp" />
+    <ClInclude Include="mython\lexer.h" />
+    <ClInclude Include="mython\test_runner.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="test_runner.h" />
+    <ClCompile Include="mython\lexer.cpp" />
+    <ClCompile Include="mython\lexer_test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

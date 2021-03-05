@@ -334,9 +334,3 @@ void RunLexerTests(TestRunner& tr) {
 }
 
 } /* namespace Parse */
-
-int main() {
-  TestRunner tr;
-  Parse::RunLexerTests(tr);
-  return 0;
-}

@@ -22,8 +22,7 @@ template <typename T>
 struct ValueStatement : Statement {
   T value;
 
-  explicit ValueStatement(T v) : value(std::move(v)) {
-  }
+  explicit ValueStatement(T v) : value(std::move(v)) {}
 
   ObjectHolder Execute(Runtime::Closure&) override {
     return ObjectHolder::Share(value);
@@ -106,8 +105,7 @@ struct NewInstance : Statement {
 
 class UnaryOperation : public Statement {
 public:
-  UnaryOperation(std::unique_ptr<Statement> argument) : argument(std::move(argument)) {
-  }
+  UnaryOperation(std::unique_ptr<Statement> argument) : argument(std::move(argument)) {}
 
 protected:
   std::unique_ptr<Statement> argument;
@@ -124,8 +122,7 @@ public:
   BinaryOperation(std::unique_ptr<Statement> lhs, std::unique_ptr<Statement> rhs)
     : lhs(std::move(lhs))
     , rhs(std::move(rhs))
-  {
-  }
+  {}
 
 protected:
   std::unique_ptr<Statement> lhs, rhs;
@@ -193,9 +190,7 @@ private:
 class Return : public Statement {
 public:
   explicit Return(std::unique_ptr<Statement> statement)
-    : statement(std::move(statement))
-  {
-  }
+    : statement(std::move(statement)) {}
 
   ObjectHolder Execute(Runtime::Closure& closure) override;
 

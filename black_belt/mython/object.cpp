@@ -37,7 +37,7 @@ ClassInstance::ClassInstance(const Class& cls)
 }
 
 ObjectHolder ClassInstance::Call(const std::string& method, const std::vector<ObjectHolder>& actual_args) {
-  if (!HasMethod(method, actual_args.size())) throw runtime_error("");
+  if (!HasMethod(method, actual_args.size())) throw runtime_error("Clas Instance::Call");
   else {
     auto m = cls.GetMethod(method);
     Closure closure = Fields();
@@ -72,7 +72,30 @@ const std::string& Class::GetName() const {
 }
 
 void Bool::Print(std::ostream& os) {
-  os << boolalpha << GetValue();
+  os << (GetValue() ? "True" : "False");
+}
+
+bool Bool::IsTrue() const {
+  return GetValue();
+}
+
+template<>
+bool ValueObject<int>::IsTrue() const {
+  return value;
+}
+
+template<>
+bool ValueObject<string>::IsTrue() const {
+  return value.size() != 0;
+}
+
+template<>
+bool ValueObject<bool>::IsTrue() const {
+  return value;
+}
+
+bool Object::IsTrue() const {
+  return true;
 }
 
 } /* namespace Runtime */

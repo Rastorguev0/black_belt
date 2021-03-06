@@ -22,7 +22,7 @@ namespace Runtime {
       if (l && r) {
         return l->GetValue() == r->GetValue();
       }
-      else throw runtime_error("");
+      else throw runtime_error("Equal");
     }
   }
 
@@ -38,7 +38,7 @@ namespace Runtime {
       if (l && r) {
         return l->GetValue() < r->GetValue();
       }
-      else throw runtime_error("");
+      else throw runtime_error("Less");
     }
   }
 

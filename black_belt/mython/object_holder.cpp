@@ -40,7 +40,10 @@ namespace Runtime {
   }
 
   bool IsTrue(ObjectHolder object) {
-    return object.Get();
+    if (auto o = object.Get()) {
+      return o->IsTrue();
+    }
+    else return false;
   }
 
 }

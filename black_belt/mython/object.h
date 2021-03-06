@@ -20,6 +20,7 @@ class Object {
 public:
   virtual ~Object() = default;
   virtual void Print(std::ostream& os) = 0;
+  virtual bool IsTrue() const;
 };
 
 template <typename T>
@@ -30,6 +31,7 @@ public:
   void Print(std::ostream& os) override {
     os << value;
   }
+  bool IsTrue() const override;
 
   const T& GetValue() const {
     return value;
@@ -46,6 +48,7 @@ class Bool : public ValueObject<bool> {
 public:
   using ValueObject<bool>::ValueObject;
   void Print(std::ostream& os) override;
+  bool IsTrue() const override;
 };
 
 struct Method {

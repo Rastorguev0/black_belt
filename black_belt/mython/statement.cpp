@@ -34,7 +34,7 @@ namespace Ast {
   }
 
   unique_ptr<Print> Print::Variable(std::string var) {
-    return make_unique<Print>(make_unique<Ast::VariableValue>(move(var)));
+    return make_unique<Print>(make_unique<VariableValue>(move(var)));
   }
 
   Print::Print(unique_ptr<Statement> argument) {
@@ -93,7 +93,7 @@ namespace Ast {
       if (_lhs.TryAs<ClassInstance>()->HasMethod("__add__", 1)) {
         return _lhs.TryAs<ClassInstance>()->Call("__add__", { ObjectHolder::Share(*_rhs) });
       }
-      else throw runtime_error("");
+      else throw runtime_error("Add::Execute");
     }
     else {
       if (_lhs.TryAs<String>() && _rhs.TryAs<String>()) {
@@ -107,42 +107,53 @@ namespace Ast {
             _lhs.TryAs<Number>()->GetValue() + _rhs.TryAs<Number>()->GetValue()
             });
         }
-        else throw runtime_error("");
+        else throw runtime_error("Add::Execute");
       }
     }
   }
 
   ObjectHolder Sub::Execute(Closure& closure) {
-    auto l = lhs->Execute(closure).TryAs<Runtime::Number>();
-    auto r = rhs->Execute(closure).TryAs<Runtime::Number>();
-    if (l && r) {
-      return ObjectHolder::Own(Runtime::Number{ l->GetValue() - r->GetValue() });
+    auto l = lhs->Execute(closure);
+    auto r = rhs->Execute(closure);
+    if (l.TryAs<Runtime::Number>() && r.TryAs<Runtime::Number>()) {
+      return ObjectHolder::Own(Runtime::Number{
+        l.TryAs<Runtime::Number>()->GetValue() - r.TryAs<Runtime::Number>()->GetValue()
+        });
     }
-    else throw runtime_error("");
+    else throw runtime_error("Sub::Execute");
   }
 
   ObjectHolder Mult::Execute(Runtime::Closure& closure) {
-    auto l = lhs->Execute(closure).TryAs<Runtime::Number>();
-    auto r = rhs->Execute(closure).TryAs<Runtime::Number>();
-    if (l && r) {
-      return ObjectHolder::Own(Runtime::Number{ l->GetValue() * r->GetValue() });
+    auto l = lhs->Execute(closure);
+    auto r = rhs->Execute(closure);
+    if (l.TryAs<Runtime::Number>() && r.TryAs<Runtime::Number>()) {
+      return ObjectHolder::Own(Runtime::Number{
+        l.TryAs<Runtime::Number>()->GetValue() * r.TryAs<Runtime::Number>()->GetValue()
+        });
     }
-    else throw runtime_error("");
+    else throw runtime_error("Mult::Execute");
   }
 
   ObjectHolder Div::Execute(Runtime::Closure& closure) {
-    auto l = lhs->Execute(closure).TryAs<Runtime::Number>();
-    auto r = rhs->Execute(closure).TryAs<Runtime::Number>();
-    if (l && r) {
-      if (r->GetValue() == 0) throw runtime_error("");
-      return ObjectHolder::Own(Runtime::Number{ l->GetValue() / r->GetValue() });
+    auto l = lhs->Execute(closure);
+    auto r = rhs->Execute(closure);
+    if (l.TryAs<Runtime::Number>() && r.TryAs<Runtime::Number>()) {
+      return ObjectHolder::Own(Runtime::Number{
+        l.TryAs<Runtime::Number>()->GetValue() / r.TryAs<Runtime::Number>()->GetValue()
+        });
     }
-    else throw runtime_error("");
+    else throw runtime_error("Div::Execute");
   }
 
   ObjectHolder Compound::Execute(Closure& closure) {
     for (const auto& stmt : statements) {
-      stmt->Execute(closure);
+      if (dynamic_cast<Return*>(stmt.get())) {
+        return stmt->Execute(closure);
+      }
+      auto result = stmt->Execute(closure);
+      if (dynamic_cast<IfElse*>(stmt.get())) {
+        if (result) return result;
+      }
     }
     return ObjectHolder::None();
   }
@@ -174,16 +185,27 @@ namespace Ast {
     : condition(move(condition)), if_body(move(if_body)), else_body(move(else_body)) {}
 
   ObjectHolder IfElse::Execute(Runtime::Closure& closure) {
-    if (condition->Execute(closure)) return if_body->Execute(closure);
-    else return else_body->Execute(closure);
+    if (IsTrue(condition->Execute(closure))) {
+      if (if_body)
+        return if_body->Execute(closure);
+    }
+    else {
+      if (else_body)
+        return else_body->Execute(closure);
+    }
+    return ObjectHolder::None();
   }
 
   ObjectHolder Or::Execute(Runtime::Closure& closure) {
-    return ObjectHolder::Own(Runtime::Bool{ lhs->Execute(closure) || rhs->Execute(closure) });
+    return ObjectHolder::Own(Runtime::Bool{
+      IsTrue(lhs->Execute(closure)) || IsTrue(rhs->Execute(closure))
+      });
   }
 
   ObjectHolder And::Execute(Runtime::Closure& closure) {
-    return ObjectHolder::Own(Runtime::Bool{ lhs->Execute(closure) && rhs->Execute(closure) });
+    return ObjectHolder::Own(Runtime::Bool{
+      IsTrue(lhs->Execute(closure)) && IsTrue(rhs->Execute(closure))
+      });
   }
 
   ObjectHolder Not::Execute(Runtime::Closure& closure) {
@@ -208,7 +230,23 @@ namespace Ast {
   NewInstance::NewInstance(const Runtime::Class& class_) : NewInstance(class_, {}) {}
 
   ObjectHolder NewInstance::Execute(Runtime::Closure& closure) {
-    auto inst_class = ObjectHolder::Own(Runtime::ClassInstance{ class_ });
+    auto* new_instance = new Runtime::ClassInstance(class_);
+    if (new_instance->HasMethod("__init__", args.size())) {
+      std::vector<ObjectHolder> actual_args;
+      for (const auto& statement : args) {
+        actual_args.push_back(statement->Execute(closure));
+      }
+      new_instance->Call("__init__", actual_args);
+    }
+
+    return ObjectHolder::Share(*new_instance);
+  }
+
+
+} /* namespace Ast */
+
+/*
+ObjectHolder inst_class = ObjectHolder::Own(Runtime::ClassInstance{ class_ });
     if (inst_class.TryAs<Runtime::ClassInstance>()->HasMethod("__init__", args.size())) {
       vector<ObjectHolder> actual_args;
       for (const auto& arg : args) {
@@ -217,7 +255,4 @@ namespace Ast {
       inst_class.TryAs<Runtime::ClassInstance>()->Call("__init__", actual_args);
     }
     return inst_class;
-  }
-
-
-} /* namespace Ast */
+*/

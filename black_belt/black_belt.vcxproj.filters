@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mython\lexer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="mython\test_runner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -36,11 +33,11 @@
     <ClInclude Include="mython\statement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mython\lexer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mython\lexer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="mython\comparators.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -72,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mython\lexer_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mython\lexer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

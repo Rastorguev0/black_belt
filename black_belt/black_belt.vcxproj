@@ -19,27 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mython\comparators.h" />
-    <ClInclude Include="mython\lexer.h" />
-    <ClInclude Include="mython\object.h" />
-    <ClInclude Include="mython\object_holder.h" />
-    <ClInclude Include="mython\parse.h" />
-    <ClInclude Include="mython\statement.h" />
-    <ClInclude Include="mython\test_runner.h" />
+    <ClCompile Include="optional\optional.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mython\comparators.cpp" />
-    <ClCompile Include="mython\lexer.cpp" />
-    <ClCompile Include="mython\lexer_test.cpp" />
-    <ClCompile Include="mython\mython.cpp" />
-    <ClCompile Include="mython\object.cpp" />
-    <ClCompile Include="mython\object_holder.cpp" />
-    <ClCompile Include="mython\object_holder_test.cpp" />
-    <ClCompile Include="mython\object_test.cpp" />
-    <ClCompile Include="mython\parse.cpp" />
-    <ClCompile Include="mython\parse_test.cpp" />
-    <ClCompile Include="mython\statement.cpp" />
-    <ClCompile Include="mython\statement_test.cpp" />
+    <ClInclude Include="optional\optional.h" />
+    <ClInclude Include="optional\test_runner.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

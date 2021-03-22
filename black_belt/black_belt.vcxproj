@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="optional\optional.cpp" />
+    <ClInclude Include="optional\test_runner.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="optional\optional.h" />
-    <ClInclude Include="optional\test_runner.h" />
+    <ClCompile Include="equals_to_one_of.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

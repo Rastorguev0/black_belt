@@ -1,6 +1,9 @@
 #include "test_runner.h"
 
-// EqualsToOneOf(x, "apple", "orange") означает (x == "apple" || x == "orange")
+template <typename T, typename... Other>
+inline bool EqualsToOneOf(const T& x, const Other& ... args) {
+  return ((x == args) || ...);
+}
 
 void Test() {
   auto x = "pear";

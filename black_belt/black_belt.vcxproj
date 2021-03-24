@@ -23,7 +23,7 @@
     <ClInclude Include="vector\vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vector\test.cpp" />
+    <ClCompile Include="vector\test2.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

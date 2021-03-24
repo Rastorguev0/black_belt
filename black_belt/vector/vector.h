@@ -7,11 +7,19 @@ struct Allocator {
   T* buf = nullptr;
   size_t cp = 0;
 
+  static T* Allocate(size_t n) {
+    return static_cast<T*>(operator new(sizeof(T) * n));
+  }
+
+  static void Deallocate(T* buf) {
+    operator delete(buf);
+  }
+
   Allocator() = default;
   Allocator(size_t n) {
     buf = Allocate(n);
     cp = n;
-  }  
+  }
 
   void Swap(Allocator& other) {
     std::swap(buf, other.buf);
@@ -41,14 +49,6 @@ struct Allocator {
   }
   const T& operator [] (size_t index) const {
     return buf[index];
-  }
-
-  static T* Allocate(size_t n) {
-    return static_cast<T*>(operator new(sizeof(T) * n));
-  }
-
-  static void Deallocate(T* buf) {
-    operator delete(buf);
   }
 
   ~Allocator() {
@@ -89,6 +89,34 @@ public:
 
   const T& operator[](size_t i) const;
   T& operator[](size_t i);
+
+  // В данной части задачи реализуйте дополнительно эти функции:
+  using iterator = T*;
+  using const_iterator = const T*;
+
+  iterator begin() noexcept;
+  iterator end() noexcept;
+
+  const_iterator begin() const noexcept;
+  const_iterator end() const noexcept;
+
+  // Тут должна быть такая же реализация, как и для константных версий begin/end
+  const_iterator cbegin() const noexcept;
+  const_iterator cend() const noexcept;
+
+  // Вставляет элемент перед pos
+  // Возвращает итератор на вставленный элемент
+  iterator Insert(const_iterator pos, const T& elem);
+  iterator Insert(const_iterator pos, T&& elem);
+
+  // Конструирует элемент по заданным аргументам конструктора перед pos
+  // Возвращает итератор на вставленный элемент
+  template <typename ... Args>
+  iterator Emplace(const_iterator it, Args&&... args);
+
+  // Удаляет элемент на позиции pos
+  // Возвращает итератор на элемент, следующий за удалённым
+  iterator Erase(const_iterator it);
 
 private:
   Allocator<T> data;
@@ -231,4 +259,117 @@ const T& Vector<T>::operator[](size_t i) const {
 template<typename T>
 T& Vector<T>::operator[](size_t i) {
   return data[i];
+}
+
+template<typename T>
+typename Vector<T>::iterator Vector<T>::begin() noexcept {
+  return data.buf;
+}
+
+template<typename T>
+typename Vector<T>::iterator Vector<T>::end() noexcept {
+  return data + sz;
+}
+
+template<typename T>
+typename Vector<T>::const_iterator Vector<T>::begin() const noexcept {
+  return data.buf;
+}
+
+template<typename T>
+typename Vector<T>::const_iterator Vector<T>::end() const noexcept {
+  return data + sz;
+}
+
+// Тут должна быть такая же реализация, как и для константных версий begin/end
+template<typename T>
+typename Vector<T>::const_iterator Vector<T>::cbegin() const noexcept {
+  return data.buf;
+}
+
+template<typename T>
+typename Vector<T>::const_iterator Vector<T>::cend() const noexcept {
+  return data + sz;
+}
+
+// Вставляет элемент перед pos
+// Возвращает итератор на вставленный элемент
+template<typename T>
+typename Vector<T>::iterator Vector<T>::Insert(const_iterator pos, const T& elem) {
+  if (sz == 0) {
+    PushBack(elem);
+    return begin();
+  }
+  const size_t pos_i = pos - cbegin();
+  if (sz == data.cp) {
+    Allocator<T> tmp(sz == 0 ? 1 : sz * 2);
+    std::uninitialized_move_n(data.buf, pos_i, tmp.buf);
+    std::destroy_n(data.buf, pos_i);
+    new (tmp + pos_i) T(elem);
+    std::uninitialized_move_n(data + pos_i, sz - pos_i, tmp + pos_i + 1);
+    std::destroy_n(data + pos_i, sz - pos_i);
+    data.Swap(tmp);
+    sz++;
+    return data + pos_i;
+  }
+  else {
+    for (auto i = end() - 1; i >= pos; --i) {
+      std::uninitialized_move_n(i, 1, i + 1);
+      std::destroy_at(i);
+    }
+    sz++;
+    new (data + pos_i) T(elem);
+    return data + pos_i;
+  }
+}
+
+template<typename T>
+typename Vector<T>::iterator Vector<T>::Insert(const_iterator pos, T&& elem) {
+  if (sz == 0) {
+    PushBack(std::move(elem));
+    return begin();
+  }
+  const size_t pos_i = pos - cbegin();
+  if (sz == data.cp) {
+    Allocator<T> tmp(sz == 0 ? 1 : sz * 2);
+    std::uninitialized_move_n(data.buf, pos_i, tmp.buf);
+    std::destroy_n(data.buf, pos_i);
+    new (tmp + pos_i) T(std::move(elem));
+    std::uninitialized_move_n(data + pos_i, sz - pos_i, tmp + pos_i + 1);
+    std::destroy_n(data + pos_i, sz - pos_i);
+    data.Swap(tmp);
+    sz++;
+    return data + pos_i;
+  }
+  else {
+    for (auto i = end() - 1; i >= pos; --i) {
+      std::uninitialized_move_n(i, 1, i + 1);
+      std::destroy_at(i);
+    }
+    sz++;
+    new (data + pos_i) T(std::move(elem));
+    return data + pos_i;
+  }
+}
+
+// Конструирует элемент по заданным аргументам конструктора перед pos
+// Возвращает итератор на вставленный элемент
+template<typename T>
+template <typename ... Args>
+typename Vector<T>::iterator Vector<T>::Emplace(const_iterator pos, Args&&... args) {
+  return Insert(pos, T(std::forward<Args>(args)...));
+}
+
+// Удаляет элемент на позиции pos
+// Возвращает итератор на элемент, следующий за удалённым
+template<typename T>
+typename Vector<T>::iterator Vector<T>::Erase(const_iterator pos) {
+  size_t pos_i = pos - cbegin();
+  std::destroy_at(pos);
+  for (auto i = data + pos_i + 1; i < end(); ++i) {
+    std::uninitialized_move_n(i, 1, i - 1);
+    std::destroy_at(i);
+  }
+  sz--;
+  return data + pos_i;
 }
